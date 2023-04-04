@@ -3,22 +3,24 @@ header {
     justify-content: space-between;
     align-content: center;
 }
+
 #welcome {
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 45px;
     width: 100%;
-    
+
 
 }
 
 #instructions {
     text-align: center;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 30px;
     width: 100%;
     margin-top: -20px;
 }
+
 main {
     display: flex;
     flex-direction: column;
@@ -28,15 +30,19 @@ main {
 }
 
 button {
-    display:flex;
+    display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
     padding: 15px;
     border-radius: 10px;
-    margin:auto;
+    margin: auto;
     font-weight: bold;
     background-color: forestgreen;
-    color:whitesmoke;
+    color: whitesmoke;
     cursor: pointer;
+}
+
+.hidden {
+    display: none;
 }
