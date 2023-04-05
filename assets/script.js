@@ -99,3 +99,40 @@ function startQuiz() {
 }
 startButton.addEventListener("click", startQuiz);
 
+answerButton.addEventListener("click", function (event) {
+    if (event.target.nodeName !== "BUTTON") {
+        return;
+    }
+    var userChoice = event.target.innerText
+    var correctAns = quizQuestions[qIndex].correctAns
+
+    if (userChoice !== correctAns) {
+        timeAllotment -= 10;
+        timer.textContent = "Time: " + timeAllotment;
+
+        if (timeAllotment <= 0) {
+            clearInterval(timeAllotment);
+            alert("Times Up");
+            score = 0;
+        }
+    }else {
+     
+    }
+    qIndex++
+    if (qIndex >= quizQuestions.length) {
+        quizContainer.classList.add("hidden");
+        initials.classList.remove("hidden");
+        timer.textContent = "Time: " + timeAllotment;
+        clearInterval(timerInterval);
+        document.querySelector("#score").innerText = "You Scored: " + timeAllotment;
+
+        if(timeAllotment <= 0) {
+            clearInterval(timerInterval);
+            alert("Times up");
+            score = 0;
+        }
+        return;
+    }
+
+    newQuestion();
+})
