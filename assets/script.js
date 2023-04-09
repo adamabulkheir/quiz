@@ -4,15 +4,21 @@ var timeAllotment = 60;
 var quizContainer = document.querySelector("#quizContainer");
 var startContainer = document.querySelector("#firstpage");
 var timerInterval;
-var answerButton = document.querySelector("#answeroption");
+var answerButton = document.querySelector("#answerbuttons");
 var question = document.querySelector("#question");
 var qIndex = 0;
 var opt1 = document.querySelector("#opt1");
 var opt2 = document.querySelector("#opt2");
 var opt3 = document.querySelector("#opt3");
 var opt4 = document.querySelector("#opt4");
+var initials = document.querySelector("#initialBox");
+var playerInitials = document.querySelector("#initials");
+var highscores = document.querySelector("#scorebox");
+var scores = [];
 
-
+if (localStorage.getItem("scores")) {
+    scores = JSON.parse(localStorage.getItem("scores"));
+}
 
 
 var quizQuestions = [
@@ -136,3 +142,10 @@ answerButton.addEventListener("click", function (event) {
 
     newQuestion();
 })
+scorebox.addEventListener("click", function(){
+    scores.push({
+       initials:playerInitials.value,
+       score:timeAllotment
+    })
+    localStorage.setItem("scores",JSON.stringify(scores));
+});

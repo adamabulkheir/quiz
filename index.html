@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header><a href="/highscores.html">View High Scores</a>
+    <header><a href="./highscores.html">View High Scores</a>
         <h4 id=timer>Time</h4>
     </header>
 
@@ -32,7 +32,12 @@
             </div>
         </div>
     </main>
-    <div class="text-content"></div>
+    <div id = "initialBox" class="text-content hidden">
+        <div id = "score"></div>
+        <input id = "initials" type="text">
+        <button id = "scorebox">Save Score</button>
+    </div>
+    
     <script src="./assets/script.js"></script>
 </body>
 
