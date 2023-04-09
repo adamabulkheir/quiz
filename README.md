@@ -8,7 +8,9 @@
 -N/A
 
 ##
-[screenshot](./assets/screenshot.png)
+'''md
+![screenshot](./assets/screenshot.png)
+'''
 
 link: https://adamabulkheir.github.io/quiz/
 
